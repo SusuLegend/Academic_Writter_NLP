@@ -1,9 +1,9 @@
 ---
-base_model: facebook/opt-125m
+base_model: EleutherAI/gpt-neo-125M
 library_name: peft
 pipeline_tag: text-generation
 tags:
-- base_model:adapter:facebook/opt-125m
+- base_model:adapter:EleutherAI/gpt-neo-125M
 - lora
 - transformers
 ---

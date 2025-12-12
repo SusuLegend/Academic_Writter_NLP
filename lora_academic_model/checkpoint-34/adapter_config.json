@@ -3,7 +3,7 @@
   "alpha_pattern": {},
   "arrow_config": null,
   "auto_mapping": null,
-  "base_model_name_or_path": "facebook/opt-125m",
+  "base_model_name_or_path": "EleutherAI/gpt-neo-125M",
   "bias": "none",
   "corda_config": null,
   "ensure_weight_tying": false,
