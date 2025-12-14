@@ -1,0 +1,11 @@
+transformers
+datasets
+accelerate
+evaluate
+sentencepiece
+tokenizers
+faiss-cpu
+evaluate
+nltk
+peft
+rouge-score
