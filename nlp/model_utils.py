@@ -104,6 +104,9 @@ def nsp_score(bert_model, bert_tokenizer, context, continuation, device = "cpu")
 	"""
 	if device is None:
 		device = "cuda" if torch.cuda.is_available() else "cpu"
+	
+	# Ensure model is on the correct device
+	bert_model = bert_model.to(device)
 
 	inputs = bert_tokenizer(context, continuation, return_tensors="pt")
 
@@ -140,7 +143,8 @@ def evaluate_predictions(predictions, references):
 	bert_res = bertscore.compute(
 		predictions=predictions,
 		references=references,
-		model_type="bert-base-uncased"
+		model_type="bert-base-uncased",
+		device="cpu"  # Run evaluation on CPU to avoid device conflicts
 	)
 	bert_precision = np.mean(bert_res["precision"])
 	bert_recall = np.mean(bert_res["recall"])
