@@ -5,7 +5,7 @@ evaluate
 sentencepiece
 tokenizers
 faiss-cpu
-evaluate
+torch
 nltk
 peft
 rouge-score
